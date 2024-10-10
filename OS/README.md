@@ -1,0 +1,1 @@
+Place exercies for week 1 here with respective name {your_name}-{exercise_name}_{submit_date}
