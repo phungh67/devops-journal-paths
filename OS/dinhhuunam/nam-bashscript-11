@@ -1,0 +1,9 @@
+#!/bin/bash
+touch {0..9}.txt #khoi tao 10 file rong
+
+for f in {0..9}
+do 
+    echo "this is file $((f+1))" >> "file$((f+1)).txt" #ghi noi dung vao file 
+    echo "this is file $((f+2))" >> "file$((f+2)).txt"
+    chmod 400 $f.txt #quyen 400 cho tung file
+done
