@@ -1,0 +1,19 @@
+#setup ngĩn to run as deamon
+#go to /etc/systemd/system/nginx.service
+
+[Unit]
+Description=A high performance web server and a reverse proxy server
+After=network.target
+
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'
+ExecReload=/usr/sbin/nginx -s reload
+ExecStop=/usr/sbin/nginx -s stop
+PIDFile=/run/nginx.pid
+Restart=on-failure
+
+
+[Install]
+WantedBy=multi-user.target
